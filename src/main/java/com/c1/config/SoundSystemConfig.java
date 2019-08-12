@@ -1,4 +1,4 @@
-package com.example.c1.config;
+package com.c1.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;

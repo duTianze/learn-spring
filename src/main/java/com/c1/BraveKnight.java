@@ -1,4 +1,4 @@
-package com.example.c1;
+package com.c1;
   
 public class BraveKnight implements Knight {
 

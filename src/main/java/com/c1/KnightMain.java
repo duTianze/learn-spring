@@ -1,4 +1,4 @@
-package com.example.c1;
+package com.c1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -11,7 +11,7 @@ public class KnightMain {
   public static void main(String[] args) throws Exception {
     ClassPathXmlApplicationContext context =
         new ClassPathXmlApplicationContext(
-            "com/example/c1/knight.xml");
+                "com/c1/knight.xml");
     Knight knight = context.getBean(Knight.class);
     knight.embarkOnQuest();
     context.close();

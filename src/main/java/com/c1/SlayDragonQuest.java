@@ -1,4 +1,4 @@
-package com.example.c1;
+package com.c1;
 
 import java.io.PrintStream;
 
