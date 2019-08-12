@@ -1,12 +1,8 @@
 package com.c1;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class KnightMain {
-
-    @Autowired
-    Knight knight;
 
   public static void main(String[] args) throws Exception {
     ClassPathXmlApplicationContext context =
