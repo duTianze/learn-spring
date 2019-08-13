@@ -1,9 +1,9 @@
-package com.c1.config;
+package com.dutianze.c1.config;
 
-import com.c1.SlayDragonQuest;
-import com.c1.BraveKnight;
-import com.c1.Knight;
-import com.c1.Quest;
+import com.dutianze.c1.SlayDragonQuest;
+import com.dutianze.c1.BraveKnight;
+import com.dutianze.c1.Knight;
+import com.dutianze.c1.Quest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

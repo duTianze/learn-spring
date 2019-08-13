@@ -1,4 +1,4 @@
-package com.c1;
+package com.dutianze.c1;
 
 public class RescueDamselQuest implements Quest {
 

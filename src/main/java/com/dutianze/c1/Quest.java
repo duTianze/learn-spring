@@ -1,4 +1,4 @@
-package com.c1;
+package com.dutianze.c1;
 
 public interface Quest {
 
