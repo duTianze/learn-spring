@@ -1,8 +1,8 @@
-package com.dutianze.c2.soundsystem;
+package com.dutianze.book.c2.soundsystem;
 
-import com.dutianze.c2.soundsystem.configuration.CDPlayerConfig;
-import com.dutianze.c2.soundsystem.service.CD;
-import com.dutianze.c2.soundsystem.service.Player;
+import com.dutianze.book.c2.soundsystem.configuration.CDPlayerConfig;
+import com.dutianze.book.c2.soundsystem.service.CD;
+import com.dutianze.book.c2.soundsystem.service.Player;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package com.dutianze.c2.soundsystem.service.impl;
+package com.dutianze.book.c2.soundsystem.service.impl;
 
-import com.dutianze.c2.soundsystem.service.CD;
+import com.dutianze.book.c2.soundsystem.service.CD;
 import org.springframework.stereotype.Component;
 
 @Component("lonelyHeartsClub")

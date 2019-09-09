@@ -1,4 +1,4 @@
-package com.dutianze.c1;
+package com.dutianze.book.c1;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

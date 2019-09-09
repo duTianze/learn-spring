@@ -1,4 +1,4 @@
-package com.dutianze.c1;
+package com.dutianze.book.c1;
 
 public interface Knight {
 
