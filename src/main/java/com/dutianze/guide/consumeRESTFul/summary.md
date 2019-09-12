@@ -60,4 +60,6 @@ bound to an object instance of type TransferServiceImpl:
 ```
 transferService -> com.acme.TransferServiceImpl
 ```
+
+[ref](https://docs.spring.io/spring-javaconfig/docs/1.0.0.M4/reference/html/ch02s02.html)
          
