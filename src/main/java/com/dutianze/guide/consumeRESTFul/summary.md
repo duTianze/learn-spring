@@ -28,7 +28,7 @@ you can use `RestTemplate` to make HTTP `GET`、`POST`、`PUT`、`DELETE` reques
 ## RestTemplateBuilder
 The `RestTemplateBuilder` is injected by Spring, and if you use it to create a RestTemplate 
 then you will benefit from all the autoconfigure that happens in Spring Boot with message converters and request factories. 
-We also extract the RestTemplate into a @Bean.
+We also extract the RestTemplate into a `@Bean`.
 
 ## spring-javaconfig
 `@Bean` is a method-level annotation and a direct analog of the XML <bean/> element. The annotation supports most of the attributes offered by <bean/>, such as: init-method, destroy-method, autowiring, lazy-init, dependency-check, depends-on and scope.
