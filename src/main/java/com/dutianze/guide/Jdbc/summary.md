@@ -16,6 +16,8 @@ The `@Autowired` JdbcTemplate field automatically loads it and makes it availabl
 2. For single insert statements, JdbcTemplate’s `insert method is good. 
 But for multiple inserts, it’s better to use batchUpdate.
 
+3.  `jdbcTemplate.query` The last argument is a Java 8 lambda used to convert each result row into a new Customer object.
+
 ## Spring Boot Maven plugin 
 [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/maven-plugin/)
 1. It collects all the jars on the classpath and builds a single, runnable "über-jar", 
