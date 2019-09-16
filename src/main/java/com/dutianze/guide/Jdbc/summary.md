@@ -26,4 +26,9 @@ which makes it more convenient to execute and transport your service.
 3. It provides a built-in dependency resolver that sets the version number to match Spring Boot dependencies. 
 You can override any version you wish, but it will default to Boot’s chosen set of versions.
 
-Build with your IDE
+## The Spring Boot Plugin has the following goals.
+
+`spring-boot:run` runs your Spring Boot application.
+`spring-boot:repackage` repackages your jar/war to be executable.
+`spring-boot:start` and `spring-boot:stop` to manage the lifecycle of your Spring Boot application (i.e. for integration tests).
+`spring-boot:build-info` generates build information that can be used by the Actuator.
