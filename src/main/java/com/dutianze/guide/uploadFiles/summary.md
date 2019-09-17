@@ -56,3 +56,19 @@ try (Stream<Path> walk = Files.walk(Paths.get("C:\\projects"))) {
 }
 ```
 `References` [Java docs – Files.walk](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#walk-java.nio.file.Path-java.nio.file.FileVisitOption...-)
+
+## Understanding java.nio.file.Path.relativize
+
+```java_holder_method_tree
+Path p1 = Paths.get("java/temp/zoo.txt");
+Path p2 = Paths.get("java/bin/elephant.bin");
+
+Path p1Top2 = p1.relativize(p2);
+System.out.println(p1Top2);
+```
+return
+```text
+../../bin/elephant.bin
+```
+
+
