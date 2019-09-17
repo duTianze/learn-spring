@@ -2,4 +2,4 @@
 every day learn a little
 
 ## Note
-1. [Uploading Files](https://github.com/duTianze/learn-spring/tree/master/src/main/java/com/dutianze/guide/uploadFiles/summary.md)
+1. [Uploading Files](https://github.com/duTianze/learn-spring/blob/master/src/main/java/com/dutianze/guide/uploadFiles/summary.md)
