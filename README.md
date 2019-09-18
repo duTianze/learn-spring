@@ -12,3 +12,5 @@ every day learn a little
 4. [scheduling](https://github.com/duTianze/learn-spring/blob/master/src/main/java/com/dutianze/guide/scheduling/summary.md)
 
 5. [Uploading Files](https://github.com/duTianze/learn-spring/blob/master/src/main/java/com/dutianze/guide/uploadFiles/summary.md)
+
+6. [LDAP](https://github.com/duTianze/learn-spring/blob/master/src/main/java/com/dutianze/guide/LDAP/summary.md)
