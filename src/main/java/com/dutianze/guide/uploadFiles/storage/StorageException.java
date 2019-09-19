@@ -1,4 +1,4 @@
-package com.dutianze.guide.uploadFiles;
+package com.dutianze.guide.uploadFiles.storage;
 
 /**
  * @author: dutianze

@@ -1,4 +1,4 @@
-package com.dutianze.guide.uploadFiles;
+package com.dutianze.guide.uploadFiles.storage;
 
 import lombok.Data;
 import org.springframework.context.annotation.Configuration;

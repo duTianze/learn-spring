@@ -1,5 +1,9 @@
 package com.dutianze.guide.uploadFiles;
 
+import com.dutianze.guide.uploadFiles.storage.StorageException;
+import com.dutianze.guide.uploadFiles.storage.StorageFileNotFoundException;
+import com.dutianze.guide.uploadFiles.storage.StorageProperties;
+import com.dutianze.guide.uploadFiles.storage.StorageService;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;

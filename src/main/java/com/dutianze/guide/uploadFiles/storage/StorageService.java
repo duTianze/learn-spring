@@ -1,4 +1,4 @@
-package com.dutianze.guide.uploadFiles;
+package com.dutianze.guide.uploadFiles.storage;
 
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
