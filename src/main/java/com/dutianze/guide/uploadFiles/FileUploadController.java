@@ -51,6 +51,11 @@ public class FileUploadController {
                 "attachment; filename=\"" + file.getFilename() + "\"").body(file);
     }
 
+    /**
+     * 导出stream到文件
+     * @param response
+     * @throws Exception
+     */
     @GetMapping("/download")
     @ResponseBody
     public void download(HttpServletResponse response) throws Exception{
