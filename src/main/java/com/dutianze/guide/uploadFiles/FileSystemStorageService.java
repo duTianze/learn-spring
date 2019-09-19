@@ -4,6 +4,7 @@ import com.dutianze.guide.uploadFiles.storage.StorageException;
 import com.dutianze.guide.uploadFiles.storage.StorageFileNotFoundException;
 import com.dutianze.guide.uploadFiles.storage.StorageProperties;
 import com.dutianze.guide.uploadFiles.storage.StorageService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.MalformedURLException;
@@ -24,6 +26,7 @@ import java.util.stream.Stream;
  * @author: dutianze
  * Date: 2019-09-17
  */
+@Slf4j
 @Service
 public class FileSystemStorageService implements StorageService, InitializingBean {
 
@@ -81,14 +84,20 @@ public class FileSystemStorageService implements StorageService, InitializingBea
     }
 
     @Override
-    public void downloadAsResource(OutputStream outputStream) {
+    public void download(HttpServletResponse response) {
         try {
-            for (int i=0; i< 100; i++) {
-                outputStream.write("hah".getBytes());
+            response.setBufferSize(10);
+            OutputStream outputStream = response.getOutputStream();
+            for (int i=0; i< 10000; i++) {
+                Thread.sleep(10);
+                String result = "write:" + i;
+                log.info("result:{}", result);
+                outputStream.write(result.getBytes());
+                response.flushBuffer();
             }
             outputStream.flush();
             outputStream.close();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

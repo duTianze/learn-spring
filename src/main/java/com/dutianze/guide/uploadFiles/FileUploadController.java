@@ -51,13 +51,13 @@ public class FileUploadController {
                 "attachment; filename=\"" + file.getFilename() + "\"").body(file);
     }
 
-    @GetMapping("/files/download")
+    @GetMapping("/download")
     @ResponseBody
-    public void downloadFile(HttpServletResponse response) throws Exception{
-        log.info("downloadFile");
+    public void download(HttpServletResponse response) throws Exception{
+        log.info("download");
         response.setContentType("text/plain");
         response.setHeader("Content-Disposition","attachment;filename=myFile.txt");
-        storageService.downloadAsResource(response.getOutputStream());
+        storageService.download(response);
         response.flushBuffer();
     }
 
