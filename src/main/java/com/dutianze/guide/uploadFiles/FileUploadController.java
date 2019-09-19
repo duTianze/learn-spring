@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.stream.Collectors;
 
 /**
@@ -48,6 +49,16 @@ public class FileUploadController {
         Resource file = storageService.loadAsResource(filename);
         return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,
                 "attachment; filename=\"" + file.getFilename() + "\"").body(file);
+    }
+
+    @GetMapping("/files/download")
+    @ResponseBody
+    public void downloadFile(HttpServletResponse response) throws Exception{
+        log.info("downloadFile");
+        response.setContentType("text/plain");
+        response.setHeader("Content-Disposition","attachment;filename=myFile.txt");
+        storageService.downloadAsResource(response.getOutputStream());
+        response.flushBuffer();
     }
 
     @PostMapping("/")

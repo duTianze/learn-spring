@@ -3,6 +3,7 @@ package com.dutianze.guide.uploadFiles.storage;
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.OutputStream;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
@@ -21,6 +22,8 @@ public interface StorageService {
     Path load(String filename);
 
     Resource loadAsResource(String filename);
+
+    void downloadAsResource(OutputStream outputStream);
 
     void deleteAll();
 }

@@ -13,6 +13,7 @@ import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -76,6 +77,19 @@ public class FileSystemStorageService implements StorageService, InitializingBea
             }
         } catch (MalformedURLException e) {
             throw new StorageFileNotFoundException("Could not read file: " + filename, e);
+        }
+    }
+
+    @Override
+    public void downloadAsResource(OutputStream outputStream) {
+        try {
+            for (int i=0; i< 100; i++) {
+                outputStream.write("hah".getBytes());
+            }
+            outputStream.flush();
+            outputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
