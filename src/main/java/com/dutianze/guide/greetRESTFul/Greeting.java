@@ -1,4 +1,4 @@
-package com.dutianze.guide.RESTFul;
+package com.dutianze.guide.greetRESTFul;
 
 import lombok.Data;
 
