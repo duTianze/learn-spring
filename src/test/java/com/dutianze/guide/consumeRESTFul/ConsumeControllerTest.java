@@ -1,5 +1,7 @@
 package com.dutianze.guide.consumeRESTFul;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.dutianze.guide.greetRESTFul.Greeting;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
@@ -11,9 +13,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.RequestBuilder;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.net.URL;
 
@@ -85,5 +90,17 @@ public class ConsumeControllerTest {
                 Greeting.class);
         log.info("statusCode:{}, OK:{}, response:{}", response.getStatusCode(), HttpStatus.OK, response);
         assert response.getStatusCode().equals(HttpStatus.OK);
+    }
+
+    @Test
+    public void shouldReturnMessage() throws Exception{
+        RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/greeting")
+                .param("name", "dutianze")
+                .contentType(MediaType.TEXT_PLAIN);
+        String result = mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
+        JSONObject jsonObject = JSON.parseObject(result);
+        assert jsonObject.get("content").equals("Hello, dutianze!");
     }
 }
