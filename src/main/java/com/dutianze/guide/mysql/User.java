@@ -11,7 +11,7 @@ import javax.persistence.Id;
  * @author: dutianze
  * Date: 2019-09-25
  */
-@Entity
+@Entity // This tells Hibernate to make a table out of this class
 @Data
 public class User {
 

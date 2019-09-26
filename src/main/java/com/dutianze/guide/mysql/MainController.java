@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
  * Date: 2019-09-25
  */
 @Slf4j
-@RestController  // This means that this class is a Controller
+@Controller  // This means that this class is a Controller
 @RequestMapping(path = "/demo") // This means URL's start with /demo (after Application path)
 public class MainController {
 
@@ -18,7 +18,8 @@ public class MainController {
     private UserRepository userRepository;
 
     @PostMapping(path="/add") // Map ONLY POST Requests
-    public @ResponseBody String addNewUser(@RequestParam String name, @RequestParam String email) {
+    @ResponseBody
+    public String addNewUser(@RequestParam String name, @RequestParam String email) {
         log.info("addNewUser, name:{}, email:{}", name, email);
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
@@ -30,6 +31,7 @@ public class MainController {
     }
 
     @GetMapping(path = "/all")
+    @ResponseBody
     public Iterable<User> getAllUsers() {
         // This returns a JSON or XML with the users
         return userRepository.findAll();
